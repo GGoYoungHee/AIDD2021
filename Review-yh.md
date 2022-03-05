@@ -33,3 +33,31 @@
 - 팀원들과 함께 도메인 공부했던 흔적 남기기!
 ![image](https://user-images.githubusercontent.com/77769026/143005802-2a4d8b52-59b7-4b3e-a2f9-6e9e2ce93493.png)
 
++ 공부한 흔적 남기기
+export PATH=$PATH:/c/nsml
+
+nsml run -d nia_dm_prelim -e main.py
+nsml run -d nia_dm_prelim -e ./AIDD2021/baseline/main_bnb.py 
+
+nsml submit -t AID029/nia_dm_prelim/[세션번호] 0
+
+- t는 문제 없는지 돌려보기
+
+세션을 통해서 모델의 체크포인트 보기
+nsml model ls AID029/nia_dm_prelim/601
+
+AID029/nia_dm_prelim/123 : LGBM + FE 
+
+dataset key: dict_keys(['X_train', 'y_train', 'X_val', 'y_val'])
+dataset은 dictionary 형태!
+
+Type of dataset:  <class 'dict'>
+Type of X_train:  <class 'pandas.core.frame.DataFrame'>
+Columns of X_train:  Index(['age', 'Ht', 'Wt', 'BMI', 'SBP', 'DBP', 'PR', 'HbA1c', 'FBG', 'TC',
+       'TG', 'LDL', 'HDL', 'Alb', 'BUN', 'Cr', 'CrCl', 'AST', 'ALT', 'GGT',
+       'ALP', 'gender_enc'],
+      dtype='object')
+Cr, AST, ALT, ALT, ALP, GGT*Gender, GGT+ALP
+
+loss: 1보다 큼 => recall 상승 (recall=tp/(tp+fn))
+loss: 1보다 작음 => precision 상승 (precision=tp/(tp+fp))
