@@ -1,5 +1,5 @@
 # About the competition
-[대회 설명](/origin-READ.md)
+- 대회설명을 보려면 [클릭](/origin-READ.md)
 
 
 # About Model
