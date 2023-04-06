@@ -1,3 +1,6 @@
+# About the competition
+(/origin-READ.md)
+/origin-READ.md
 # About Model
 - baseline model : lightGBM
 - 시도한 모델: knn,xgb, catboost, Stacking
